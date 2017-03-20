@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/Users/krishnasakinala/Documents/workspace/BrowserStackDemo/libs/testng-6.10.jar"/>
-	<classpathentry kind="lib" path="/Users/krishnasakinala/Documents/workspace/BrowserStackDemo/libs/selenium-server-standalone-3.3.1.jar"/>
-	<classpathentry kind="lib" path="/Users/krishnasakinala/Documents/workspace/BrowserStackDemo/libs/jcommander-1.60.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/jcommander-1.60.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/selenium-server-standalone-3.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/testng-6.10.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

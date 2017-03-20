@@ -1,0 +1,31 @@
+[{
+    "browser": "chrome",
+    "browser_version": "56.0",
+    "os": "Windows",
+    "os_version": "7"
+	  "resolution": "1280x1024"
+    "browserName": "",
+    "platform": "",
+    "device": ""
+  },
+  {
+    "browser": "firefox",
+    "browser_version": "52.0",
+    "os": "Windows",
+    "os_version": "10"
+	  "resolution": "1280x1024"
+    "browserName": "",
+    "platform": "",
+    "device": ""
+  },
+  {
+    "browser": "",
+    "browser_version": "",
+    "os": "",
+    "os_version": ""
+    "resolution": ""
+    "browserName": "iPhone",
+    "platform": "MAC",
+    "device": "iPhone 6S Plus"
+  }
+]
