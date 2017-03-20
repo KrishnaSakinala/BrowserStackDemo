@@ -42,7 +42,6 @@ public class BrowserStackDemoWithJson
 		    String Platform = (String) j.get("os");
 		    String PlatformVersion = (String) j.get("os_version");
 		    String Resolution = (String) j.get("resolution");
-		    
 		    System.out.println("Run no."+(i+1));
 		    DesiredCapabilities caps = new DesiredCapabilities();
 		    caps.setCapability("browser", Browser);
