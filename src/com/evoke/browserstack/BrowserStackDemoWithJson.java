@@ -42,7 +42,7 @@ public class BrowserStackDemoWithJson
 	@BeforeClass
 	public void setUp() throws FileNotFoundException, IOException, ParseException
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/reports/BrowserStackReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/BrowserStackReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 		
