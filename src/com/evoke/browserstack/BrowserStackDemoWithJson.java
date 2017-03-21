@@ -48,7 +48,6 @@ public class BrowserStackDemoWithJson
 		
 		parser = new JSONParser();
 		Object obj = parser.parse(new FileReader(System.getProperty("user.dir")+"\\util\\browsers.json"));
-		test.log(Status.INFO,"Reading Capabilities fron JSON file");
 		jsonArray = (JSONArray) obj;
 		
 		for(int i=0;i<jsonArray.size();i++)
@@ -81,7 +80,6 @@ public class BrowserStackDemoWithJson
 		    String Device = (String) j.get("device");
 		    
 		    System.out.println("Run no."+(i+1));
-		    test.log(Status.INFO,"Setting Capabilities");
 		    DesiredCapabilities caps = new DesiredCapabilities();
 		    caps.setCapability("browser", Browser);
 		    caps.setCapability("browser_version", BrowserVersion);
