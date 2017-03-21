@@ -6,5 +6,17 @@
 	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/selenium-server-standalone-3.3.1.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/testng-6.10.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/extentreports-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/HTML/AutomationTesting.in/Dummy/BrowserStackDemo/libs/mongodb-driver-core-3.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

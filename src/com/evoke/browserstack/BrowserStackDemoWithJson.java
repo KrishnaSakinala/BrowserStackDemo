@@ -13,9 +13,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class BrowserStackDemoWithJson 
 {
@@ -26,12 +35,20 @@ public class BrowserStackDemoWithJson
 	public static final String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 	public static JSONObject j;
 	WebDriver driver;
+	ExtentHtmlReporter htmlReporter;
+    ExtentReports extent;
+    ExtentTest test;
 	
 	@BeforeClass
 	public void setUp() throws FileNotFoundException, IOException, ParseException
 	{
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/reports/BrowserStackReport.html");
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+		
 		parser = new JSONParser();
 		Object obj = parser.parse(new FileReader(System.getProperty("user.dir")+"\\util\\browsers.json"));
+		test.log(Status.INFO,"Reading Capabilities fron JSON file");
 		jsonArray = (JSONArray) obj;
 		
 		for(int i=0;i<jsonArray.size();i++)
@@ -64,6 +81,7 @@ public class BrowserStackDemoWithJson
 		    String Device = (String) j.get("device");
 		    
 		    System.out.println("Run no."+(i+1));
+		    test.log(Status.INFO,"Setting Capabilities");
 		    DesiredCapabilities caps = new DesiredCapabilities();
 		    caps.setCapability("browser", Browser);
 		    caps.setCapability("browser_version", BrowserVersion);
@@ -86,23 +104,47 @@ public class BrowserStackDemoWithJson
 	@Test
 	public void titleVerification()
 	{
+		test = extent.createTest("titleVerification");
 		String actualTitle = "IT Services | Software Consulting & Outsourcing";
 		String expectedTitle = driver.getTitle();
+		test.log(Status.INFO,"Getting the Website Title :"+expectedTitle);
 		Assert.assertEquals(expectedTitle, actualTitle);
 	}
 	
 	@Test
 	public void urlVerification()
 	{
+		test = extent.createTest("urlVerification");
 		String actualUrl = "http://www.evoketechnologies.com/";
 		String expectedUrl = driver.getCurrentUrl();
+		test.log(Status.INFO,"Getting the Website Url :"+expectedUrl);
 		Assert.assertEquals(expectedUrl, actualUrl);
 	}
+	
+	@AfterMethod
+    public void getResult(ITestResult result)
+    {
+        if(result.getStatus() == ITestResult.FAILURE)
+        {
+            test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
+            test.fail(result.getThrowable());
+        }
+        else if(result.getStatus() == ITestResult.SUCCESS)
+        {
+            test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
+        }
+        else
+        {
+            test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" Test Case SKIPPED", ExtentColor.ORANGE));
+            test.skip(result.getThrowable());
+        }
+    }
 	
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		extent.flush();
+    	driver.quit();
 	}
 
 }
