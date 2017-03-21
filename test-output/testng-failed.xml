@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.evoke.browserstack.BrowserStackDemoWithJson">
+        <methods>
+          <include name="titleVerification"/>
+          <include name="setUp"/>
+          <include name="urlVerification"/>
+        </methods>
+      </class> <!-- com.evoke.browserstack.BrowserStackDemoWithJson -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

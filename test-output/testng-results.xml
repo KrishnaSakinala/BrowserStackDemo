@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="120676" started-at="2017-03-20T13:06:45Z" finished-at="2017-03-20T13:08:46Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="120676" started-at="2017-03-20T13:06:45Z" finished-at="2017-03-20T13:08:46Z">
+      <class name="com.evoke.browserstack.BrowserStackDemoWithJson">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.evoke.browserstack.BrowserStackDemoWithJson@2f32ff]" name="setUp" is-config="true" duration-ms="100136" started-at="2017-03-20T18:36:45Z" finished-at="2017-03-20T18:38:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="titleVerification()[pri:0, instance:com.evoke.browserstack.BrowserStackDemoWithJson@2f32ff]" name="titleVerification" duration-ms="255" started-at="2017-03-20T18:38:25Z" finished-at="2017-03-20T18:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleVerification -->
+        <test-method status="PASS" signature="urlVerification()[pri:0, instance:com.evoke.browserstack.BrowserStackDemoWithJson@2f32ff]" name="urlVerification" duration-ms="260" started-at="2017-03-20T18:38:26Z" finished-at="2017-03-20T18:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlVerification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.evoke.browserstack.BrowserStackDemoWithJson@2f32ff]" name="tearDown" is-config="true" duration-ms="19997" started-at="2017-03-20T18:38:26Z" finished-at="2017-03-20T18:38:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.evoke.browserstack.BrowserStackDemoWithJson -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
