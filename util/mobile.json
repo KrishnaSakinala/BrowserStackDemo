@@ -1,0 +1,11 @@
+[{
+    "browserName": "iPhone",
+    "platform": "MAC",
+    "device": "iPhone 6S Plus"
+  },
+  {
+    "browserName": "android",
+    "platform": "ANDROID",
+    "device": "Google Nexus 5"
+  }
+]
