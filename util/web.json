@@ -3,13 +3,16 @@
     "os_version": "7",
     "browser": "Firefox",
     "browser_version": "52.0",
-    "resolution": "1024x768"
+    "resolution": "1024x768",
+    "project":"BrowserStackWeb"
   },
   {
      "os": "Windows",
     "os_version": "10",
     "browser": "Chrome",
     "browser_version": "55.0",
-    "resolution": "1024x768"
+    "resolution": "1024x768",
+    "project":"BrowserStackWeb"
   }
+  
 ]
