@@ -23,6 +23,9 @@ import com.aventstack.extentreports.Status;
 
 public class BrowserStackMobileDemoWithJson extends BaseTest
 {
+	String BrowserName = null;
+	String Platform;
+	String Device;
 	@BeforeClass
 	public void setUp() throws FileNotFoundException, IOException, ParseException
 	{
@@ -34,9 +37,9 @@ public class BrowserStackMobileDemoWithJson extends BaseTest
 		{
 		    j=(JSONObject)jsonArray.get(i);
 		    		    
-		    String BrowserName = (String) j.get("browserName");
-		    String Platform = (String) j.get("platform");
-		    String Device = (String) j.get("device");
+		    BrowserName = (String) j.get("browserName");
+		    Platform = (String) j.get("platform");
+		    Device = (String) j.get("device");
 		    
 		    System.out.println("Run no."+(i+1));
 		    DesiredCapabilities caps = new DesiredCapabilities();
@@ -57,7 +60,7 @@ public class BrowserStackMobileDemoWithJson extends BaseTest
 	public void verifyUserRegistration() throws InterruptedException
 	{
 		Register register = PageFactory.initElements(driver, Register.class);
-		test=extent.createTest("Verify User Registration");
+		test=extent.createTest("Verify User Registration - "+"("+Platform+" - "+Device+" - "+BrowserName+")");
 		register.fillRegistrationform();
 		test.log(Status.INFO, "User Registration Test Case has been Verified");
 		test.log(Status.PASS, "verifyUserRegistrationForm Success");
@@ -67,7 +70,7 @@ public class BrowserStackMobileDemoWithJson extends BaseTest
 	public void verifyPhotoUpload()
 	{
 		Register register = PageFactory.initElements(driver, Register.class);
-		test=extent.createTest("verifyPhotoUpload");
+		test=extent.createTest("verifyPhotoUpload - "+"("+Platform+" - "+Device+" - "+BrowserName+")");
 		register.photoUpload();
 		test.log(Status.INFO, "Photo Uploaded Successfully");
 		test.log(Status.PASS, "verifyPhotoUpload Sucess");

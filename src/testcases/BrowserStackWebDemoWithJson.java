@@ -23,6 +23,12 @@ import com.aventstack.extentreports.Status;
 
 public class BrowserStackWebDemoWithJson extends BaseTest
 {
+	String Browser;
+	String BrowserVersion;
+	String os;
+	String PlatformVersion;
+	String Resolution;
+	
 	@BeforeClass
 	public void setUp() throws FileNotFoundException, IOException, ParseException
 	{
@@ -33,11 +39,11 @@ public class BrowserStackWebDemoWithJson extends BaseTest
 		for(int i=0;i<jsonArray.size();i++)
 		{
 		    j=(JSONObject)jsonArray.get(i);
-		    String Browser = (String) j.get("browser");
-		    String BrowserVersion = (String) j.get("browser_version");
-		    String os = (String) j.get("os");
-		    String PlatformVersion = (String) j.get("os_version");
-		    String Resolution = (String) j.get("resolution");
+		    Browser = (String) j.get("browser");
+		    BrowserVersion = (String) j.get("browser_version");
+		    os = (String) j.get("os");
+		    PlatformVersion = (String) j.get("os_version");
+		    Resolution = (String) j.get("resolution");
 		    
 		    System.out.println("Run no."+(i+1));
 		    DesiredCapabilities caps = new DesiredCapabilities();
@@ -59,7 +65,7 @@ public class BrowserStackWebDemoWithJson extends BaseTest
 	public void verifyUserRegistration() throws InterruptedException
 	{
 		Register register = PageFactory.initElements(driver, Register.class);
-		test=extent.createTest("Verify User Registration");
+		test=extent.createTest("Verify User Registration - "+"("+os+" - "+PlatformVersion+" - "+Browser+" - "+BrowserVersion+" - "+Resolution+")");
 		register.fillRegistrationform();
 		test.log(Status.INFO, "User Registration Test Case has been Verified");
 		test.log(Status.PASS, "verifyUserRegistrationForm Success");
@@ -69,7 +75,7 @@ public class BrowserStackWebDemoWithJson extends BaseTest
 	public void verifyPhotoUpload()
 	{
 		Register register = PageFactory.initElements(driver, Register.class);
-		test=extent.createTest("verifyPhotoUpload");
+		test=extent.createTest("verifyPhotoUpload - "+"("+os+" - "+PlatformVersion+" - "+Browser+" - "+BrowserVersion+" - "+Resolution+")");
 		register.photoUpload();
 		test.log(Status.INFO, "Photo Uploaded Successfully");
 		test.log(Status.PASS, "verifyPhotoUpload Sucess");
